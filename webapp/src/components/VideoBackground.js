@@ -2,20 +2,10 @@ import styled from 'styled-components';
 
 const BURGERBOAT_BACKGROUND_VIDEO = "/video/burgerboat_bw.mp4";
 
-const VideoTitle = styled.h3`
-  color: #fff;  
-  font: 4rem/1.1 "burgerboat-font", sans-serif;    
-  font-style: italic;
-  margin: 3rem;
-  position: absolute;
-  text-transform: uppercase;
-  width: 100%;
-  z-index: 2;
-  
-`
 const VideoContent = styled.div`
+  /*
   position: fixed;
-  bottom: 0;
+  bottom: 0;*/
   background: rgba(0,0,0,0.5);
   color: #f1f1f1;
   width: 100%;
@@ -47,8 +37,7 @@ const Section = styled.section`
 
 const VideoBackground = (props) => {
     return (
-      <Section>
-        <VideoTitle>{'BURGER BOAT\n'}</VideoTitle>
+      <Section>        
         <VideoSource/>
         <VideoContent>{props.children}</VideoContent>
       </Section>

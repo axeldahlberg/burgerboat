@@ -11,7 +11,7 @@ const BurgerBoatLogo = styled.img`
 `;
 
 const Header = styled.header`
-  position: fixed;
+  position: fixed;  
   display: flex;
   background: #231f20;
   justify-content: space-between;
@@ -21,28 +21,49 @@ const Header = styled.header`
 `;
 
 const LeftSide = styled.section`
-  display: flex;  
+  display: flex;
   justify-content: space-between;  
   cursor: pointer;
-  
 `;
+
+
 
 const Nav = styled.nav`
-  margin-top: 15px;
-  & > li {
-    display: inline;
-    margin-right: 50px;
-  }
-  & > li:last-type-of {
-    margin-right: 0;
-  }
+  display: flex;
+  margin-top: 20px;
 `;
 
+const Ul = styled.ul`
+
+`;
+
+const Li = styled.li`  
+  list-style: none;
+  display: inline;
+  
+  margin-right: 50px;
+
+  &:hover {
+    border-radius: 120px 90px 60px 30px/30px 60px 90px 120px;
+    background-color: grey;
+    /*background-color: var(--burger-boat-grey);*/
+  }
+  
+  &:last-child {
+    margin-right: 100px;
+  }
+`
+
 const A = styled.a`
-  font: 1.0rem "burgerboat-font", sans-serif;
+  font-style: normal;
+  font-weight: bold;
+  margin: 10px 10px;
+  padding: 5px 5px 5px 5px;
+
+  font: 1.2rem "burgerboat-font", sans-serif;
   &:links,:visited {
     color: white;
-    text-decoration: none;  
+    text-decoration: none;
   }
   &:hover {
     cursor: pointer;
@@ -66,11 +87,7 @@ const BurgerBoatTitle = styled.h3`
   z-index: 2;  
 */
 
-const Ul = styled.ul`
-`;
 
-const Li = styled.li`
-`
 
 const BurgerBoatNav = (props) => {
   return (
@@ -80,8 +97,7 @@ const BurgerBoatNav = (props) => {
         <BurgerBoatTitle>{'BURGER BOAT\n'}</BurgerBoatTitle>
       </LeftSide>
       <Nav>
-        <Ul>
-          <Li><A>VAR ÄR VI</A></Li>
+        <Ul>          
           <Li><A>BÅTEN</A></Li>
           <Li><A>MENY</A></Li>
           <Li><A>OM OSS</A></Li>
@@ -92,6 +108,7 @@ const BurgerBoatNav = (props) => {
 }
 
 //https://github.com/styled-components/styled-components/issues/330
+//https://medium.com/@pitipatdop/10-useful-tips-for-styled-components-b7710b021e6a
 
 export { BurgerBoatNav as default }
 

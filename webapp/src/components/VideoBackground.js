@@ -1,3 +1,4 @@
+import BurgerBoatSvg from '../icon/burgerboatsvg.svg';
 import styled from 'styled-components';
 
 const BURGERBOAT_BACKGROUND_VIDEO = "/video/burgerboat_bw.mp4";
@@ -19,6 +20,7 @@ const Video = styled.video`
   transform: translate(-50%,-50%);
   top: 50%;
   left: 50%;
+  z-index: -1;
 `;
 
 const VideoSource = () => {
@@ -35,9 +37,38 @@ const Section = styled.section`
   position: relative;  
 `;
 
+
+const Brand = styled.img`
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%,-50%);
+  width: 375px;
+`;
+
+const BentText = styled.h3`
+  color: #fff;
+  font: 4rem "burgerboat-font", sans-serif;
+  left: 50%;
+  top: 50%;
+`;
+
+
+const Container = styled.div`
+  display: flex;
+  justify-content: center;
+  flex-direction: row nowrap;
+  align-content: center;
+`;
+
 const VideoBackground = (props) => {
     return (
-      <Section>        
+      <Section>
+        <Container>
+          <BentText>{'BURGER'}</BentText>
+          <Brand src={BurgerBoatSvg}/>
+          <BentText>{'BOAT'}</BentText>
+        </Container>
         <VideoSource/>
         <VideoContent>{props.children}</VideoContent>
       </Section>

@@ -1,9 +1,8 @@
 
 
 import BurgerBoatSvg from '../icon/burgerboatsvg.svg';
-import styled from 'styled-components';
+import styled from 'styled-components/macro';
 import propTypes from 'prop-types';
-
 
 const BurgerBoatLogo = styled.img`
   width: 62px;
@@ -15,9 +14,9 @@ const Header = styled.header`
   display: flex;
   background: #231f20;
   justify-content: space-between;
-  width: 100%;  
-  
+  width: 100%;
   padding: 25px 50px 20px 30px;
+  z-index: 10;  
 `;
 
 const LeftSide = styled.section`
@@ -26,23 +25,25 @@ const LeftSide = styled.section`
   cursor: pointer;
 `;
 
-
-
 const Nav = styled.nav`
   display: flex;
   margin-top: 20px;
+  color: #f1f1f1;
 `;
 
 const Ul = styled.ul`
 
+  @media only screen and (max-width: 400px) {
+    flex-direction: column;
+  }
+  display: flex;
+  align-items: flex-start;  
+  list-style: none;
+
 `;
 
-const Li = styled.li`  
-  list-style: none;
-  display: inline;
-  
+const Li = styled.li`   
   margin-right: 50px;
-
   &:hover {
     border-radius: 120px 90px 60px 30px/30px 60px 90px 120px;
     background-color: grey;
@@ -60,13 +61,22 @@ const A = styled.a`
   margin: 10px 10px;
   padding: 5px 5px 5px 5px;
 
-  font: 1.2rem "burgerboat-font", sans-serif;
+  @media only screen and (min-width: 401px) {
+    font: 1.2rem "burgerboat-font", sans-serif;
+  }
+
+  white-space: nowrap;
+
   &:links,:visited {
     color: white;
     text-decoration: none;
   }
   &:hover {
     cursor: pointer;
+  }
+  
+  @media only screen and (max-width: 400px) {
+    font: 1rem "burgerboat-font", sans-serif;
   }
 `;
 
@@ -97,7 +107,7 @@ const BurgerBoatNav = (props) => {
         <BurgerBoatTitle>{'BURGER BOAT\n'}</BurgerBoatTitle>
       </LeftSide>
       <Nav>
-        <Ul>          
+        <Ul>
           <Li><A>BÅTEN</A></Li>
           <Li><A>MENY</A></Li>
           <Li><A>OM OSS</A></Li>

@@ -7,8 +7,8 @@ import Navigation from './components/Navigation';
 import Footer from './components/Footer';
 
 import styled from 'styled-components/macro';
+import MenuFlyer from './components/MenuFlyer';
 //import { BrowserRouter as Router, Switch, Route, Link} from 'react-router-dom';
-
 
 const Page = styled.div`
   display: flex;
@@ -29,6 +29,7 @@ function App() {
           Axel
         </Header>
         <VideoHero />
+        <MenuFlyer />
       </Page>
       
     </>

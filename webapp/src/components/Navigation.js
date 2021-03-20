@@ -33,7 +33,7 @@ const Nav = styled.nav`
 
 const Ul = styled.ul`
 
-  @media only screen and (max-width: 400px) {
+  @media only screen and (max-width: 411px) {
     flex-direction: column;
   }
   display: flex;

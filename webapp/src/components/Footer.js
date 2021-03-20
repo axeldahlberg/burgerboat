@@ -1,11 +1,13 @@
 
+import { nanoid } from 'nanoid';
+
 import styled from 'styled-components/macro';
 
 import { FacebookSquare, Instagram, Twitter, Yelp} from '@styled-icons/boxicons-logos';
 import { Hamburger } from '@styled-icons/fa-solid/Hamburger';
 
 const sizeAttribute = (props) => ({
-  size: 64
+  size: 48
 });
 
 const footerIconCssColor = `color: white`;
@@ -17,11 +19,11 @@ const FooterWhiteBurgerDudes = styled(Hamburger).attrs(sizeAttribute)`${footerIc
 const FooterWhiteYelp = styled(Yelp).attrs(sizeAttribute)`${footerIconCssColor}`;
 
 const socialMediaIconLinks = [
-  {icon: FooterWhiteFacebookSquare, url: 'https://www.facebook.com/burgerboatSTHLM/'},
-  {icon: FooterWhiteInstagram, url: 'https://www.instagram.com/burgerboat/'},
-  {icon: FooterWhiteTwitter, url: ''},
-  {icon: FooterWhiteBurgerDudes, url: ''},
-  {icon: FooterWhiteYelp, url: 'https://www.yelp.com/biz/burger-boat-stockholm'}
+  {icon: FooterWhiteFacebookSquare, url: 'https://www.facebook.com/burgerboatSTHLM/',alt: 'Facebook'},
+  {icon: FooterWhiteInstagram, url: 'https://www.instagram.com/burgerboat/',alt: 'Instagram'},
+  {icon: FooterWhiteTwitter, url: 'https://twitter.com/burgerboatsthlm?lang=en', alt: 'Twitter'},
+  {icon: FooterWhiteBurgerDudes, url: 'https://www.burgerdudes.se/sweden/stockholm/burger-boat/', alt: 'Burger Dudes'},
+  {icon: FooterWhiteYelp, url: 'https://www.yelp.com/biz/burger-boat-stockholm', alt: 'YELP'}
 ];
 
 //https://www.youtube.com/watch?v=emL9dkijfZY
@@ -51,10 +53,10 @@ const Footer = (props) => {
   return (<>
     <Container>
       <SocialMediaList>
-        { socialMediaIconLinks.map(({icon: Icon, url}) => {
+        { socialMediaIconLinks.map(({icon: Icon, url, title}) => {
           return (
-            <SocialMediaListItem>
-              <A href={url} target="_blank">
+            <SocialMediaListItem key={nanoid()}>
+              <A href={url} target="_blank" key={nanoid()} title={title}>
                 <Icon/>
 
               </A>

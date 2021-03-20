@@ -1,11 +1,12 @@
 
-import styled from "styled-components"
+import styled from "styled-components/macro";
 
 import BurgerBoatSvg from '../icon/burgerboatsvg.svg';
 
 const BurgerBoatLogo = styled.img`
   margin: 50px 0px;
   cursor: pointer;
+  width: 150px;
 `;
 
 const plusMenuText = 'Med Pommes Frites, Dryck & Dipp';
@@ -44,8 +45,11 @@ const PreambleContainer = styled.section`
   align-items: center;
   flex-flow: column nowrap;
 `;
+
 const PreambleText = styled.p``;
-const DescriptionList = styled.dl``;
+const DescriptionList = styled.dl`
+width: 100%;
+`;
 const DescriptionTerm = styled.dt`
   display: flex;
   justify-content: space-between;
@@ -61,8 +65,13 @@ const DescriptionTermLeft = styled.span`
 
 const DescriptionDetails = styled.dd`
   font-style: italic;
-  margin: 0px 0px 10px 0px;
+  margin: 0px 0px 15px 0px;
+  display: flex;
+  justify-content: space-between;
 `;
+
+const DescriptionDetailsRight = styled.span``;
+const DescriptionDetailsLeft = styled.span``;
 
 const MenuFlyer = (props) => {
   return (
@@ -81,7 +90,8 @@ const MenuFlyer = (props) => {
             </DescriptionTerm>
             {description && description.item && ( 
               <DescriptionDetails>
-                {description.item}  {(description.price) ? description.price + currencyText : ''}
+                <DescriptionDetailsLeft>{description.item}</DescriptionDetailsLeft>
+                <DescriptionDetailsRight>{(description.price) ? description.price + currencyText : ''}</DescriptionDetailsRight>
               </DescriptionDetails>)
             }
           </>

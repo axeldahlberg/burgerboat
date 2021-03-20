@@ -14,6 +14,7 @@ const Page = styled.div`
   display: flex;
   flex-flow: row wrap;
   min-width: 360px;
+  justify-content: center;
 `;
 
 const Header = styled.section`
@@ -29,7 +30,7 @@ function App() {
           Axel
         </Header>
         <VideoHero />
-        <MenuFlyer />
+        <Footer />      
       </Page>
       
     </>

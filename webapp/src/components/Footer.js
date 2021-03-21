@@ -23,12 +23,11 @@ const socialMediaIconLinks = [
   {icon: FooterWhiteInstagram, url: 'https://www.instagram.com/burgerboat/',alt: 'Instagram'},
   {icon: FooterWhiteTwitter, url: 'https://twitter.com/burgerboatsthlm?lang=en', alt: 'Twitter'},
   {icon: FooterWhiteBurgerDudes, url: 'https://www.burgerdudes.se/sweden/stockholm/burger-boat/', alt: 'Burger Dudes'},
-  {icon: FooterWhiteYelp, url: 'https://www.yelp.com/biz/burger-boat-stockholm', alt: 'YELP'}
+  {icon: FooterWhiteYelp, url: 'https://www.yelp.com/biz/burger-boat-stockholm', alt: 'Yelp'}
 ];
 
-//https://www.youtube.com/watch?v=emL9dkijfZY
 const SocialMediaList = styled.ul`
-margin-right: 10px;
+  margin-right: 10px;
 `;
 const SocialMediaListItem = styled.li`
   display: inline-block;
@@ -36,7 +35,6 @@ const SocialMediaListItem = styled.li`
 `;
 
 const Container = styled.div`
-  position: fixed;
   display: flex;
   justify-content: flex-end;
   align-items: center;
@@ -58,7 +56,6 @@ const Footer = (props) => {
             <SocialMediaListItem key={nanoid()}>
               <A href={url} target="_blank" key={nanoid()} title={title}>
                 <Icon/>
-
               </A>
             </SocialMediaListItem>
           )

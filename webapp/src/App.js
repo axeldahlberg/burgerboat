@@ -11,6 +11,13 @@ import Footer from './components/Footer';
 import styled from 'styled-components/macro';
 import MenuFlyer from './components/MenuFlyer';
 import ImageCarousel from './components/ImageCarousel';
+
+import AboutUs from './components/AboutUs';
+import BoatMap from './components/BoatMap';
+
+import BoatInformation from './components/BoatInformation';
+import Timeline from './components/Timeline';
+
 //import { BrowserRouter as Router, Switch, Route, Link} from 'react-router-dom';
 
 const Page = styled.div`
@@ -32,6 +39,10 @@ function App() {
         <VideoHero />
         <ImageCarousel/>
         <MenuFlyer language={'en'}/>
+        <BoatMap />
+        <AboutUs />
+        <BoatInformation />
+        <Timeline />
         <Footer />
       </Page>
       

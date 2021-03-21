@@ -3,6 +3,7 @@ import React, { useState, useEffect } from 'react';
 
 import styled from "styled-components/macro";
 import { nanoid } from 'nanoid';
+
 import { instanceOf } from 'prop-types';
 
 const ImageGrid = styled.section`
@@ -29,9 +30,17 @@ const ImageGridItem = styled.span`
 */
 
 const instagramImages = [
-  {src:'2015-08-13_6UP8K7yx8q.jpg',alt:'Pierre som kapten'},
-  {src:'2014-05-20_oOhY94yxwR.jpg',alt:'Burger Boat gänget Jonathan, Elias och Pierre'},
-  {src:'2015-08-06_6CPZt-yx_K.jpg',alt:'Burger Boat gänget äter'},
+  {src:'pierre/2015-08-13_6UP8K7yx8q.jpg',alt:'Pierre som kapten'},
+  {src:'the_gang/2014-05-20_oOhY94yxwR.jpg',alt:'Burger Boat gänget Jonathan, Elias och Pierre'},
+  {src:'the_gang/2015-08-06_6CPZt-yx_K.jpg',alt:'Burger Boat gänget äter'},
+  {src:'boat_in_dock/2015-07-13_5E6bW2yx5t.jpg', alt: 'Båten i hamn'},
+  {src:'food/2015-05-24_3Ezxr_Sx8t.jpg', alt: 'Burgare på rad'},
+  {src:'food/2015-05-28_3OjPQMSx7E.jpg', alt: 'Double cheesburger'},
+  {src:'elias/2015-08-19_6jdKflSx8P.jpg', alt: 'Elias med bröd'},
+  {src:'jonathan/2015-08-11_6PIzkuSxzy.jpg', alt: 'Jonathan vid stekbordet'},
+  {src:'boat_by_the_sea/2015-08-26_61okY4yx0m.jpg', alt: 'Jonathan vid stekbordet'},
+  
+  /*
   {src:'2014-05-28_ojZaGWSx5d.jpg',alt:''},
   {src:'2014-06-25_prYk4Qyx6Y.jpg',alt:''},
   {src:'2015-05-24_3Ezxr_Sx8t.jpg',alt:''},
@@ -40,22 +49,23 @@ const instagramImages = [
   {src:'2015-07-03_4r5ebQSx28.jpg',alt:''},
   {src:'2015-07-15_5KbuLsyx_p.jpg',alt:''},
   {src:'2015-08-11_6PIzkuSxzy.jpg',alt:''},
-  {src:'2015-08-19_6jdKflSx8P.jpg',alt:''},
+  {src:'2015-08-19_6jdKflSx8P.jpg',alt:''},*/
 ]
+
 
 const imagePath = "/img/instagram/burgerboat_instagram/";
 
 // does not work
 const styles = {
-  transition: 'opacity 1s ease-in-out;',
-  opacity: 0.9,
+  transition: 'opacity 10s ease-in-out',  
   //transitionTimingFunction: 'ease-in-out',
   //animationDuration: '10s'
 }
 
-const ImageCarousel = () => {
+const ImageCarousel = ({changeEachSeconds}) => {
+  const autoChangeSeconds = changeEachSeconds || 10;
 
-  const totalImages = 6; // in pair of three
+  const totalImages = 9; // in pair of three
 
   const [pagination, setPagination] = useState([0,totalImages-1]);
   useEffect(() => {    
@@ -68,7 +78,7 @@ const ImageCarousel = () => {
         }    
       }
       handlePagination();      
-    }, 5000);
+    }, autoChangeSeconds*1000);
 
     return () => {
       clearInterval(paginationInterval);

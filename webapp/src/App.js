@@ -25,10 +25,18 @@ const Page = styled.div`
   flex-flow: row wrap;
   min-width: 360px;
   justify-content: center;
-  
+  background: black;
 `;
 
 const Header = styled.section`
+`;
+
+const MidPage = styled.div`
+  display: flex;
+  justify-content: center;
+  color: black;
+  flex-direction: column;
+
 `;
 
 function App() { 
@@ -36,11 +44,15 @@ function App() {
     <>
       <Page>
         <Navigation/>
+        
         <VideoHero />
-        <ImageCarousel/>
-        <MenuFlyer language={'en'}/>
-        <BoatMap />
+        
         <AboutUs />
+        <MenuFlyer language={'en'} />
+        <ImageCarousel />
+        
+        <BoatMap />
+        
         <BoatInformation />
         <Timeline />
         <Footer />

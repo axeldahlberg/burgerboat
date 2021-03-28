@@ -1,8 +1,29 @@
 
+import propTypes from 'prop-types';
 
 import BurgerBoatSvg from '../icon/burgerboatsvg.svg';
 import styled from 'styled-components/macro';
-import propTypes from 'prop-types';
+
+import { Boat } from '@styled-icons/ionicons-solid/Boat';
+import { FoodMenu } from '@styled-icons/boxicons-solid/FoodMenu';
+import { RestaurantMenu } from '@styled-icons/material/RestaurantMenu';
+
+import { Map } from '@styled-icons/fa-solid/Map';
+
+const WhiteFoodMenu  = styled(FoodMenu)`
+  color: white;
+`;
+const WhiteResturantMenuMenu  = styled(RestaurantMenu)`
+  color: white;
+`;
+const WhiteBoat  = styled(Boat)`
+  color: white;
+`;
+
+const WhiteMap = styled(Map)`
+  color: white;
+`;
+
 
 const BurgerBoatLogo = styled.img`
   width: 62px;
@@ -12,15 +33,19 @@ const BurgerBoatLogo = styled.img`
 const Header = styled.header`
   position: fixed;  
   display: flex;
-  background: #231f20;
-  justify-content: space-between;
+  
+  background: black;
+  /*background: #231f20;*/
+  
+  justify-content: center;
+  
   width: 100%;
-  padding: 25px 50px 20px 30px;
+  padding: 0px 50px 20px 30px;
   z-index: 10;  
 `;
 
 const LeftSide = styled.section`
-  display: flex;
+  display: flex;  
   justify-content: space-between;  
   cursor: pointer;
 `;
@@ -32,24 +57,25 @@ const Nav = styled.nav`
 `;
 
 const Ul = styled.ul`
-
+  display: flex;
+  /*
   @media only screen and (max-width: 411px) {
     flex-direction: column;
-  }
-  display: flex;
-  align-items: flex-start;  
-  list-style: none;
+  }*/
 
+  flex-direction: row;
+  justify-content: center;
+  align-items: flex-start;
+  list-style: none;
 `;
 
 const Li = styled.li`   
   margin-right: 50px;
-  &:hover {
-    border-radius: 120px 90px 60px 30px/30px 60px 90px 120px;
-    background-color: grey;
-    /*background-color: var(--burger-boat-grey);*/
-  }
   
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
   &:last-child {
     margin-right: 100px;
   }
@@ -72,6 +98,11 @@ const A = styled.a`
     text-decoration: none;
   }
   &:hover {
+    border-radius: 120px 90px 60px 30px/30px 60px 90px 120px;    
+    
+    background-color: var(--burger-boat-grey);
+    
+    
     cursor: pointer;
   }
   
@@ -98,19 +129,43 @@ const BurgerBoatTitle = styled.h3`
 */
 
 
+const LeftNavigation = (props) => {
+  return (
+    <LeftSide>
+      <BurgerBoatLogo src={BurgerBoatSvg}/>
+      <BurgerBoatTitle>{'BURGER BOAT\n'}</BurgerBoatTitle>
+    </LeftSide>
+  );
+}
+
+//BÅTEN
+//MENY
+//OM OSS
+
 
 const BurgerBoatNav = (props) => {
   return (
     <Header>
-      <LeftSide>
-        <BurgerBoatLogo src={BurgerBoatSvg}/>
-        <BurgerBoatTitle>{'BURGER BOAT\n'}</BurgerBoatTitle>
-      </LeftSide>
+      
       <Nav>
         <Ul>
-          <Li><A>BÅTEN</A></Li>
-          <Li><A>MENY</A></Li>
-          <Li><A>OM OSS</A></Li>
+        
+        <Li>
+          <A>MENU</A>
+            <WhiteFoodMenu size={24}/>
+        </Li>
+        <Li>
+          <A>THE BOAT</A>
+            <WhiteBoat size={24}/>
+          </Li>
+          <Li>
+            <A>ABOUT</A>
+            <WhiteResturantMenuMenu size={24}/>
+          </Li>
+          <Li>
+            <A>FIND US</A>
+            <WhiteMap size={24}/>
+          </Li>
         </Ul>
       </Nav>
     </Header>

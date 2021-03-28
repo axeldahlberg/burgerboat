@@ -49,6 +49,7 @@ const Container = styled.section`
   flex-flow: column nowrap;
   align-items: center;
   color: white;
+  /*background-color: var(--burger-boat-black);*/
   background-color: black;
   padding: 30px 50px 30px 50px;
 `;

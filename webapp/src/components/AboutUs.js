@@ -12,9 +12,15 @@ const WhiteBoat = styled(Boat)`
   color: white
 `;
 
+const WhiteReadLess = styled(ReadMore)`
+  color: white;
+  transform: rotate(180deg);
+`
+
 const WhiteReadMore = styled(ReadMore)`
   color: white;
 `;
+
 
 const H3 = styled.h3`
 color: white;
@@ -27,6 +33,7 @@ const Article = styled.article`
 
 const P = styled.p`
 color: white;
+user-select: none;
 
 background-color: black;
 font-family: burgerboat-font;
@@ -82,6 +89,7 @@ const AboutUs = (props) => {
         This little stop by the road next to Lake Powell was the starting shot for Burger Boat, which now, a year later, will provide Stockholmers with the city's tastiest burgers without you as a customer having to lift a finger.
         With the help of solar panels, electric motors and locally produced raw materials, we help keep Stockholm green and clean, just as we want our children and grandchildren to experience the capital.
       </P>
+      <WhiteReadLess size={24} onClick={handleClick} />
       </Article>
       }
     </Article>

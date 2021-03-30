@@ -52,6 +52,8 @@ const Container = styled.section`
   /*background-color: var(--burger-boat-black);*/
   background-color: black;
   padding: 30px 50px 30px 50px;
+
+  max-width: 500px;
 `;
 
 const MenuHeading = styled.h3`

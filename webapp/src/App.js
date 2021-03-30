@@ -22,10 +22,12 @@ import Timeline from './components/Timeline';
 
 const Page = styled.div`
   display: flex;
-  flex-flow: row wrap;
+  flex-flow: column nowrap;
   min-width: 360px;
   justify-content: center;
   background: black;
+  align-items: center;
+ 
 `;
 
 const Header = styled.section`
@@ -36,25 +38,17 @@ const MidPage = styled.div`
   justify-content: center;
   color: black;
   flex-direction: column;
-
 `;
 
 function App() { 
   return ( 
     <>
+      <Navigation/>
       <Page>
-        <Navigation/>
-        
         <VideoHero />
-        
         <AboutUs />
         <MenuFlyer language={'en'} />
         <ImageCarousel />
-        
-        <BoatMap />
-        
-        <BoatInformation />
-        <Timeline />
         <Footer />
       </Page>
       
@@ -62,6 +56,11 @@ function App() {
   )
 }
 
+/*
+<BoatMap />
+<BoatInformation />
+<Timeline />
+*/
 export default App;
 
 

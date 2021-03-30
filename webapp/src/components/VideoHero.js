@@ -12,13 +12,10 @@ const Video = styled.video`
   min-height: 100%;
   position: absolute;
   
-  
-  
-
   @media screen and (max-width: 411px) {}
   @media only screen and (min-width: 411px) {}
-  transform: translate(-50%,-50%) scaleX(0.5)  scaleY(0.5);
-  /*transform: translate(-50%,-50%);*/
+  /*transform: translate(-50%,-50%) scaleX(0.5)  scaleY(0.5);*/
+  transform: translate(-50%,-50%);
   
   top: 50%;
   left: 50%;

@@ -35,6 +35,8 @@ const P = styled.p`
   color: white;
   user-select: none;
 
+  display: inline-block;
+
   background-color: black;
   font-family: burgerboat-font;
 
@@ -55,7 +57,9 @@ const AboutUsHeading = () => {
 
 const BurgerBoatGangPicture = () => {
   return (
+    <>
     <img src="/img/instagram/burgerboat_instagram/the_gang/2014-05-20_oOhY94yxwR.jpg" width="460" height="460" />
+    </>
   );
 }
 
@@ -76,7 +80,7 @@ const AboutUs = (props) => {
       </P>
       {value &&
       <Article>
-        
+        <BurgerBoatGangPicture style={{display: 'inline-block'}} />
         <P>
           In front of us were burgers cooked by the charismatic chef Gus. In front of his fancy grill at the back of the restaurant, he has over the years and after thousands of burgers managed to perfect his technique to perfection. The aroma evoked an enormous pleasure in us and the taste buds screamed for a bite, the very basic idea of ​​Burger Boat, which at the moment was truly diffuse, took root in our subconscious. A short distance below the restaurant, a tired houseboat simmered around on the shiny, clean waters of Lake Powell.
         </P>

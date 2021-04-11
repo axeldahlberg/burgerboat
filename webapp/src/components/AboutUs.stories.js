@@ -1,5 +1,0 @@
-
-
-
-import AboutUs from './AboutUs';
-

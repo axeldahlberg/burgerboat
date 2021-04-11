@@ -1,6 +1,8 @@
 # Burger Boat
 Burger Boat tribute site
 
+https://axeldahlberg.github.io/burgerboat/
+
 * Note that the site is note response yet :)
 
 # Roadmap (Trello)

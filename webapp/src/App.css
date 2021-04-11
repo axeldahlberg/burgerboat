@@ -1,0 +1,39 @@
+
+@font-face {
+  font-family: 'burgerboat-font';
+  src: local('burgerboat-font'), url("./fonts/burgerboat-font.woff") format('woff');
+  font-weight: normal;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: burgerboat-font;
+  --burger-boat-black-hex: #231f20;
+  --burger-boat-black: rgba(35, 31, 32, 1);
+  --burger-boat-grey: rgb(123, 112, 114);
+
+  --burger-boat-paragraph-text: 18px;
+}
+
+:root {
+  max-width: 100%;
+}
+
+html,body {
+  
+  max-width: 100%;
+  width: 100%;
+  
+  
+}
+
+body {
+  height: 100%;
+  width: 100%;
+
+
+  font-size: var(--burger-boat-paragraph-text);
+  color: var(--burger-boat-black);
+}

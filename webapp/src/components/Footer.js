@@ -36,11 +36,14 @@ const SocialMediaListItem = styled.li`
 
 const Container = styled.div`
   display: flex;
+  
   justify-content: flex-end;
   align-items: center;
+  
   bottom: 0;
   width: 100%;
   height: 70px;
+  color: black;
   background: black; /*var(--burger-boat-black);*/
 `;
 

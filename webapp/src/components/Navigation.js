@@ -31,17 +31,17 @@ const BurgerBoatLogo = styled.img`
 `;
 
 const Header = styled.header`
-  position: fixed;  
-  display: flex;
+  position: fixed;
+  display: relative;
   
   background: black;
-  /*background: #231f20;*/
   
-  justify-content: center;
-  
+  /*background: #231f20;*/  
+  justify-content: center;  
   width: 100%;
-  padding: 0px 50px 20px 30px;
-  z-index: 10;  
+  height: 120px;  
+  z-index: 10;
+
 `;
 
 const LeftSide = styled.section`
@@ -52,33 +52,25 @@ const LeftSide = styled.section`
 
 const Nav = styled.nav`
   display: flex;
-  margin-top: 20px;
+  margin-top: 20px;  
+  justify-content: center;
   color: #f1f1f1;
 `;
 
 const Ul = styled.ul`
   display: flex;
-  /*
-  @media only screen and (max-width: 411px) {
-    flex-direction: column;
-  }*/
-
   flex-direction: row;
   justify-content: center;
   align-items: flex-start;
+  
   list-style: none;
 `;
 
 const Li = styled.li`   
   margin-right: 50px;
-  
   display: flex;
   flex-direction: column;
   align-items: center;
-
-  &:last-child {
-    margin-right: 100px;
-  }
 `
 
 const A = styled.a`
@@ -98,11 +90,8 @@ const A = styled.a`
     text-decoration: none;
   }
   &:hover {
-    border-radius: 120px 90px 60px 30px/30px 60px 90px 120px;    
-    
+    border-radius: 120px 90px 60px 30px/30px 60px 90px 120px;        
     background-color: var(--burger-boat-grey);
-    
-    
     cursor: pointer;
   }
   
@@ -138,18 +127,11 @@ const LeftNavigation = (props) => {
   );
 }
 
-//BÅTEN
-//MENY
-//OM OSS
-
-
 const BurgerBoatNav = (props) => {
   return (
-    <Header>
-      
+    <Header>      
       <Nav>
-        <Ul>
-        
+        <Ul>        
         <Li>
           <A>MENU</A>
             <WhiteFoodMenu size={24}/>

@@ -17,8 +17,23 @@
   --burger-boat-paragraph-text: 18px;
 }
 
+:root {
+  max-width: 100%;
+}
+
+html,body {
+  
+  max-width: 100%;
+  width: 100%;
+  
+  
+}
+
 body {
-  height: 1200px;
+  height: 100%;
+  width: 100%;
+
+
   font-size: var(--burger-boat-paragraph-text);
   color: var(--burger-boat-black);
 }

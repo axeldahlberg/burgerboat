@@ -8,19 +8,26 @@ const BURGERBOAT_BACKGROUND_VIDEO = "/video/burgerboat_color_v2.mp4";
 const Video = styled.video`
   object-fit: cover;
   background-size: cover;  
+  max-width: 100%;
+
   min-width: 100%;
   min-height: 100%;
   position: absolute;
   
   @media screen and (max-width: 411px) {}
   @media only screen and (min-width: 411px) {}
-  /*transform: translate(-50%,-50%) scaleX(0.5)  scaleY(0.5);*/
-  transform: translate(-50%,-50%);
+
   
+  transform: translate(-50%,-50%);
+  transform: translate(-50%,-50%) scaleX(2)  scaleY(2); 
+
   top: 50%;
   left: 50%;
+  
   z-index: -10;
 `;
+
+
 
 const Source = styled.source.attrs((props) => ({
   src: process.env.PUBLIC_URL + BURGERBOAT_BACKGROUND_VIDEO,
@@ -45,6 +52,7 @@ const Section = styled.section`
   margin: 0 auto;
   z-index: 0;
   margin-bottom: 100px;
+
 `;
 
 const VideoHero = (props) => {

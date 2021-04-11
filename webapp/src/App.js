@@ -23,11 +23,14 @@ import Timeline from './components/Timeline';
 const Page = styled.div`
   display: flex;
   flex-flow: column nowrap;
-  min-width: 360px;
+  min-width: 411px;
+  
+  width: 100%;
+  
   justify-content: center;
   background: black;
   align-items: center;
- 
+  
 `;
 
 const Header = styled.section`
@@ -49,8 +52,8 @@ function App() {
         <AboutUs />
         <MenuFlyer language={'en'} />
         <ImageCarousel />
-        <Footer />
       </Page>
+      <Footer />
       
     </>
   )

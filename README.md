@@ -1,7 +1,9 @@
 # Burger Boat
 Burger Boat tribute site
 
-# Roadmap
+* Note that the site is note response yet :)
+
+# Roadmap (Trello)
 https://trello.com/b/o3xrFXsf/burgerboat-site
 
 # Why?
@@ -38,8 +40,6 @@ Enkel (Bröd, kött, dressing, sallad, tomat, stekt lök)
 Enkel Cheese (Bröd, kött, dressing, sallad, tomat, stekt lök, ost)
 Dubbel (Bröd, kött x2, dressing, sallad, tomat, stekt lök)
 Dubbel Cheese (Bröd, kött x2, dressing, sallad, tomat, stekt lök, ost x2)
-
-
 
 ### Burgerdues review
 

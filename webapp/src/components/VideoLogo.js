@@ -53,6 +53,7 @@ const Container = styled.div`
   display: flex;
   flex-flow: column;
   align-items: center;
+  justify-content: center;
   margin-top: 5rem;
 `;
 

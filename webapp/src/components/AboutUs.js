@@ -53,10 +53,12 @@ const AboutUsHeading = () => {
   return (<H3><WhiteBoat size={24} /> ABOUT US</H3>);
 };
 
+const img = `${process.env.PUBLIC_URL}/img/instagram/burgerboat_instagram/the_gang/2014-05-20_oOhY94yxwR.jpg`;
+
 const BurgerBoatGangPicture = () => {
   return (
     <>
-      <img src="/img/instagram/burgerboat_instagram/the_gang/2014-05-20_oOhY94yxwR.jpg" 
+      <img src={img} 
       width="460" 
       height="460" 
       alt="The GANG"

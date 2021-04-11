@@ -53,7 +53,7 @@ const instagramImages = [
 ]
 
 
-const imagePath = "/img/instagram/burgerboat_instagram/";
+const imagePath = `${process.env.PUBLIC_URL}/img/instagram/burgerboat_instagram/`;
 
 // does not work
 const styles = {
